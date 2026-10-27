@@ -1,0 +1,33 @@
+nohup: ignoring input
+/home/ec2-user/.local/lib/python3.9/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.1.88:5000
+Press CTRL+C to quit
+157.49.198.34 - - [26/Oct/2026 11:37:13] "GET / HTTP/1.1" 200 -
+
+aws: [ERROR]: An error occurred (NoCredentials): Unable to locate credentials. You can configure credentials by running "aws login".
+185.247.137.71 - - [26/Oct/2026 12:59:52] "GET / HTTP/1.1" 200 -
+204.76.203.214 - - [26/Oct/2026 14:28:53] "CONNECT api.ipinfo.io:443 HTTP/1.1" 404 -
+204.76.203.212 - - [26/Oct/2026 14:28:56] "CONNECT icanhazip.com:443 HTTP/1.1" 404 -
+
+aws: [ERROR]: An error occurred (NoCredentials): Unable to locate credentials. You can configure credentials by running "aws login".
+205.210.31.59 - - [26/Oct/2026 21:46:50] "GET / HTTP/1.1" 200 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /v1/models HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /api/models HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /openai/v1/models HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /v1beta/models HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /model/info HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /api/v1/models HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:44] "GET /api/status HTTP/1.1" 404 -
+40.65.56.228 - - [26/Oct/2026 21:52:45] "GET /api/config HTTP/1.1" 404 -
+
+aws: [ERROR]: An error occurred (NoCredentials): Unable to locate credentials. You can configure credentials by running "aws login".
+205.210.31.149 - - [26/Oct/2026 23:08:24] "GET / HTTP/1.1" 200 -
+
+aws: [ERROR]: An error occurred (NoCredentials): Unable to locate credentials. You can configure credentials by running "aws login".
+157.51.190.226 - - [27/Oct/2026 02:54:46] "GET / HTTP/1.1" 200 -
