@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
                 checkout scm
             }
@@ -11,11 +11,16 @@ pipeline {
                 sh 'docker build -t cloudcart-app .'
             }
         }
-        stage('Run Container') {
+        stage('Deploy Container') {
             steps {
-                sh 'docker stop cloudcart || true'
-                sh 'docker rm cloudcart || true'
-                sh 'docker run -d --name cloudcart -p 5000:5000 cloudcart-app'
+                sh '''
+                    # Stop and remove old container if it exists
+                    docker stop cloudcart-container || true
+                    docker rm cloudcart-container || true
+                    
+                    # Run the new container, mapping port 5000
+                    docker run -d -p 5000:5000 --name cloudcart-container cloudcart-app
+                '''
             }
         }
     }
