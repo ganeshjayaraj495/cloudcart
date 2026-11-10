@@ -17,7 +17,7 @@ pipeline {
                     // 1. Securely log into Docker Hub
                     sh "echo '${DOCKER_PASS}' | docker login -u '${DOCKER_USER}' --password-stdin"
                     
-                    // 2. Tag local image with your Docker Hub repo and build number
+                    // 2. Tag local image with your myapp Docker Hub repo and build number
                     sh "docker tag cloudcart-app ganesh495/myapp:${env.BUILD_NUMBER}"
                     sh "docker tag cloudcart-app ganesh495/myapp:latest"
                     
@@ -32,7 +32,7 @@ pipeline {
                 sh 'docker stop cloudcart || true'
                 sh 'docker rm cloudcart || true'
                 // Run container using your pushed image from Docker Hub
-                sh 'docker run -d --name cloudcart -p 5000:5000 ganesh495/cloudcart:latest'
+                sh 'docker run -d --name cloudcart -p 5000:5000 ganesh495/myapp:latest'
             }
         }
     }
