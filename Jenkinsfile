@@ -18,12 +18,12 @@ pipeline {
                     sh "echo '${DOCKER_PASS}' | docker login -u '${DOCKER_USER}' --password-stdin"
                     
                     // 2. Tag local image with your Docker Hub repo and build number
-                    sh "docker tag cloudcart-app ganesh495/cloudcart:${env.BUILD_NUMBER}"
-                    sh "docker tag cloudcart-app ganesh495/cloudcart:latest"
+                    sh "docker tag cloudcart-app ganesh495/myapp:${env.BUILD_NUMBER}"
+                    sh "docker tag cloudcart-app ganesh495/myapp:latest"
                     
                     // 3. Push both tags to Docker Hub
-                    sh "docker push ganesh495/cloudcart:${env.BUILD_NUMBER}"
-                    sh "docker push ganesh495/cloudcart:latest"
+                    sh "docker push ganesh495/myapp:${env.BUILD_NUMBER}"
+                    sh "docker push ganesh495/myapp:latest"
                 }
             }
         }
